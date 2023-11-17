@@ -1101,7 +1101,7 @@ MonoBehaviour:
   - {fileID: 1157086955}
   Id: 0
   ShouldUIWindowsOverlap: 0
-  CurrWindowIndex: 2
+  CurrWindowIndex: 0
 --- !u!1 &617336861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +2571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1173362291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4266,7 +4266,7 @@ MonoBehaviour:
   Content: {fileID: 1173362290}
   ReferenceName: leaderboard
   Id: 0
-  IsOpen: 0
+  IsOpen: 1
 --- !u!1 &1810509474
 GameObject:
   m_ObjectHideFlags: 0
