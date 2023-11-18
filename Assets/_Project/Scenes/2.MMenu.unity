@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &59419215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -380,7 +380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 194145467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 949646660}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UI_MainMenu, Assembly-CSharp
+        m_MethodName: Credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &194145467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2836,7 +2848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 958410856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606133838}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: leaderboard
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &958410856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3149,7 +3173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1122318224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3289,6 +3313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157086954}
   - component: {fileID: 1157086955}
+  - component: {fileID: 1157086956}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -3333,6 +3358,18 @@ MonoBehaviour:
   ReferenceName: credits
   Id: 2
   IsOpen: 0
+--- !u!114 &1157086956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157086953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52906de79013474a94c2cdc9d62a28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1173362290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,7 +3567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1427433687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 949646660}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UI_MainMenu, Assembly-CSharp
+        m_MethodName: Settings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1427433687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4014,7 +4063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585369836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606133838}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: settings
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1585369836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4374,6 +4435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1626061115}
   - component: {fileID: 1626061116}
+  - component: {fileID: 1626061117}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -4418,6 +4480,18 @@ MonoBehaviour:
   ReferenceName: settings
   Id: 1
   IsOpen: 0
+--- !u!114 &1626061117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626061114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac0d08ea7f3bf6499e1dc041105e137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681643795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,6 +5367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798309560}
   - component: {fileID: 1798309561}
+  - component: {fileID: 1798309562}
   m_Layer: 5
   m_Name: Leaderboard
   m_TagString: Untagged
@@ -5337,6 +5412,18 @@ MonoBehaviour:
   ReferenceName: leaderboard
   Id: 0
   IsOpen: 0
+--- !u!114 &1798309562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798309559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5117b3fcfc8366340b935702bebd7879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810509474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,7 +6081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1969165127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606133838}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: credits
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1969165127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6530,7 +6629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2144739861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 949646660}
+        m_TargetAssemblyTypeName: HangOn.Navigation.UI_MainMenu, Assembly-CSharp
+        m_MethodName: Leaderboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2144739861
 MonoBehaviour:
   m_ObjectHideFlags: 0

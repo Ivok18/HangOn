@@ -33,11 +33,17 @@ namespace HangOn.Navigation
         private void OnEnable()
         {
             //UIVictory.OnOpenUIVictoryRequest += Open;
+            UILeaderboard.OnOpenUILeaderboardRequest += Open;
+            UISettings.OnOpenUISettingsRequest += Open;
+            UICredits.OnOpenUICreditsRequest += Open;
         }
 
         private void OnDisable()
         {
             //UIVictory.OnOpenUIVictoryRequest -= Open;
+            UILeaderboard.OnOpenUILeaderboardRequest -= Open;
+            UISettings.OnOpenUISettingsRequest -= Open;
+            UICredits.OnOpenUICreditsRequest -= Open;
         }
 
         public void Open(string referenceName)

@@ -11,6 +11,19 @@ namespace HangOn.Navigation
             SceneManager.LoadScene(targetSceneId);
         }
 
+        public void Leaderboard()
+        {
+            UILeaderboard.Open();
+        }   
 
+        public void Settings()
+        {
+            UISettings.Open();
+        }
+
+        public void Credits()
+        {
+            UICredits.Open();
+        }
     }
 }
