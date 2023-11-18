@@ -36,6 +36,8 @@ namespace HangOn.Navigation
             UILeaderboard.OnOpenUILeaderboardRequest += Open;
             UISettings.OnOpenUISettingsRequest += Open;
             UICredits.OnOpenUICreditsRequest += Open;
+            UIPause.OnOpenUIPauseRequest += Open;
+            UIAskConfirmMainMenu.OnOpenUIAskConfirmRequest += Open;
         }
 
         private void OnDisable()
@@ -44,6 +46,8 @@ namespace HangOn.Navigation
             UILeaderboard.OnOpenUILeaderboardRequest -= Open;
             UISettings.OnOpenUISettingsRequest -= Open;
             UICredits.OnOpenUICreditsRequest -= Open;
+            UIPause.OnOpenUIPauseRequest -= Open;
+            UIAskConfirmMainMenu.OnOpenUIAskConfirmRequest -= Open;
         }
 
         public void Open(string referenceName)
