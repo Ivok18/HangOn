@@ -8029,7 +8029,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 807964727}
   m_OnClick:
     m_PersistentCalls:
@@ -8054,7 +8054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1691534945, guid: eaeb8a124ffb1924fb8f98a7018cc2cb, type: 3}
+  m_Sprite: {fileID: 881502703, guid: 9d03d2b985f0bca45afd8ca258050917, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
