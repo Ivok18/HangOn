@@ -7,7 +7,7 @@ namespace HangOn.Navigation
     {
         public void Game()
         {
-            int targetSceneId = 2;
+            int targetSceneId = 1;
             SceneManager.LoadScene(targetSceneId);
         }
 
@@ -36,7 +36,7 @@ namespace HangOn.Navigation
 
         public void MainMenu()
         {
-            int targetSceneId = 1;
+            int targetSceneId = 0;
             SceneManager.LoadScene(targetSceneId);
         }
     }

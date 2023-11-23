@@ -7,7 +7,7 @@ namespace HangOn.Navigation
     {
         public void Play()
         {
-            int targetSceneId = 2;
+            int targetSceneId = 1;
             SceneManager.LoadScene(targetSceneId);
         }
 

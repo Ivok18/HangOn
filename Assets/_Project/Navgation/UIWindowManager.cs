@@ -38,6 +38,7 @@ namespace HangOn.Navigation
             UICredits.OnOpenUICreditsRequest += Open;
             UIPause.OnOpenUIPauseRequest += Open;
             UIAskConfirmMainMenu.OnOpenUIAskConfirmRequest += Open;
+            UIEndOfRun.OnOpenUIEndOfRunRequest += Open;
         }
 
         private void OnDisable()
@@ -48,6 +49,7 @@ namespace HangOn.Navigation
             UICredits.OnOpenUICreditsRequest -= Open;
             UIPause.OnOpenUIPauseRequest -= Open;
             UIAskConfirmMainMenu.OnOpenUIAskConfirmRequest -= Open;
+            UIEndOfRun.OnOpenUIEndOfRunRequest -= Open;
         }
 
         public void Open(string referenceName)

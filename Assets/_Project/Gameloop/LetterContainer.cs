@@ -24,7 +24,7 @@ namespace HangOn.Gameloop
             underscoreImage.color = Color.black;
         }
 
-        public void DisplayOpaqueLetter(string letter)
+        public void ShowLetter(string letter)
         {
             text.text = letter;
         }
@@ -33,6 +33,11 @@ namespace HangOn.Gameloop
         {
             text.text = letter;
             text.color = new Color(text.color.r, text.color.g, text.color.b, transparency);
+        }
+
+        public void HideLetter(string letter)
+        {
+            text.text = "";
         }
     }
 }
