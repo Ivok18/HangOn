@@ -116,12 +116,18 @@ namespace HangOn.Gameloop
         public void CheckOutcome(int currentStageIndex)
         {
             bool hasRunEnded = currentStageIndex > lastStageIndex;
+            bool hasFoundWord = correctGuesses == word.Length - 2;
             if (hasRunEnded)
             {
                 // reset stage index to first stage index
                 currStageIndex = 0;
                 UIEndOfRun.Open();
             }
+            if(hasFoundWord)
+            {
+                GainWordPoints();
+            }
+
         }
 
         public void ResetKeyboard()
@@ -151,6 +157,7 @@ namespace HangOn.Gameloop
         public void GainWordPoints()
         {
             score += wordBonus;
+            OnScoreChanged?.Invoke(score);
         }
 
         public void NextStage()
