@@ -16,6 +16,9 @@ namespace HangOn.Gameloop
         [SerializeField] TextAsset possibleWord;
         [SerializeField] private string word;
         [SerializeField] private int currStageIndex;
+        [SerializeField] private int score;
+        [SerializeField] private int letterBonus;
+        [SerializeField] private int wordBonus;
         private int lastStageIndex = 11;
 
         public delegate void IncorrectGuessCallback(int currStageIndex);
@@ -23,6 +26,9 @@ namespace HangOn.Gameloop
 
         public delegate void ResetHangmanCallback(int currStageIndex);
         public static event ResetHangmanCallback OnResetHangman;
+
+        public delegate void ScoreChangedCallback(int newScore);
+        public static event ScoreChangedCallback OnScoreChanged;
       
 
         public GameObject[] Stages => hangmanStages;
@@ -89,6 +95,7 @@ namespace HangOn.Gameloop
                 {
                     isLetterInWord = true;
                     correctGuesses++;
+                    GainLetterPoints();
                     TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
                     lettersInWord[i].text = inputLetter;
                 }     
@@ -96,22 +103,24 @@ namespace HangOn.Gameloop
             if (!isLetterInWord)
             {
                 incorrectGuesses++;
-                currStageIndex++;
+                NextStage();
+                bool hasRunEnded = currStageIndex > lastStageIndex;
+                if (!hasRunEnded)
+                {
+                    OnIncorrectGuess?.Invoke(currStageIndex);
+                }               
             }
             CheckOutcome(currStageIndex);
         }
 
         public void CheckOutcome(int currentStageIndex)
         {
-            if (currentStageIndex > lastStageIndex)
+            bool hasRunEnded = currentStageIndex > lastStageIndex;
+            if (hasRunEnded)
             {
                 // reset stage index to first stage index
                 currStageIndex = 0;
                 UIEndOfRun.Open();
-            }
-            else
-            {
-                OnIncorrectGuess?.Invoke(currStageIndex);
             }
         }
 
@@ -133,6 +142,20 @@ namespace HangOn.Gameloop
             currStageIndex = stage - 1;
         }
 
+        public void GainLetterPoints()
+        {
+            score += letterBonus;
+            OnScoreChanged?.Invoke(score);
+        }
 
+        public void GainWordPoints()
+        {
+            score += wordBonus;
+        }
+
+        public void NextStage()
+        {
+            currStageIndex++;
+        }
     }
 }

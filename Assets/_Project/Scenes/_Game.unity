@@ -13739,6 +13739,7 @@ GameObject:
   - component: {fileID: 1625347772}
   - component: {fileID: 1625347774}
   - component: {fileID: 1625347773}
+  - component: {fileID: 1625347775}
   m_Layer: 5
   m_Name: Text (Score)
   m_TagString: Untagged
@@ -13786,7 +13787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10P
+  m_text: 0P
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3198a444b7bd054c8b5c37b3ca66f37, type: 2}
   m_sharedMaterial: {fileID: 2416544747669768391, guid: c3198a444b7bd054c8b5c37b3ca66f37, type: 2}
@@ -13863,6 +13864,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625347771}
   m_CullTransparentMesh: 1
+--- !u!114 &1625347775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625347771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd3a09ba7453784b9ae5109ac7cd6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636759080
 GameObject:
   m_ObjectHideFlags: 0
@@ -19303,6 +19316,9 @@ MonoBehaviour:
   possibleWord: {fileID: 4900000, guid: 4815e5d659c537d4185aa5741113541c, type: 3}
   word: 
   currStageIndex: 0
+  score: 0
+  letterBonus: 50
+  wordBonus: 100
 --- !u!4 &2083383236
 Transform:
   m_ObjectHideFlags: 0
