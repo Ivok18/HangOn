@@ -143,6 +143,31 @@ namespace HangOn.Gameloop
             OnResetHangman?.Invoke(currStageIndex);
         }
 
+        public void ResetScore()
+        {
+            score = 0;
+        }
+
+        public void ResetCorrectGuesses()
+        {
+            correctGuesses = 0;
+        }
+
+        public void ResetIncorrectGuesses()
+        {
+            incorrectGuesses = 0;
+        }
+
+        public void ResetGame()
+        {
+            ResetKeyboard();
+            ResetHangman();
+            ResetScore();
+            ResetCorrectGuesses();
+            ResetIncorrectGuesses();
+            OnScoreChanged?.Invoke(0);
+        }
+
         public void SetStage(int stage)
         {
             currStageIndex = stage - 1;
