@@ -1,9 +1,13 @@
 using HangOn.Navigation;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 namespace HangOn.Gameloop
 {
@@ -21,6 +25,8 @@ namespace HangOn.Gameloop
         [SerializeField] private int score;
         [SerializeField] private int letterBonus;
         [SerializeField] private int wordBonus;
+        [SerializeField] private List<string> lettersFound;
+        [SerializeField] private List<string> lettersNotFound;
         private int lastStageIndex = 11;
 
         public delegate void IncorrectGuessCallback(int currStageIndex);
@@ -54,6 +60,8 @@ namespace HangOn.Gameloop
         public IEnumerator NewWord(float waitTime)
         {
             yield return new WaitForSeconds(waitTime);
+            lettersFound.Clear();
+            lettersNotFound.Clear();
             foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
             {
                 Destroy(child.gameObject);
@@ -69,6 +77,7 @@ namespace HangOn.Gameloop
                 order++;
                 var temp = Instantiate(LetterContainer, wordContainer.transform);
                 LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
+                letterContainer.SetAttachedLetter(letter.ToString());
                 bool isFirstLetter = order == 0;
                 bool isLastLetter = order >= word.Length - 1;
                 if (isFirstLetter || isLastLetter)
@@ -100,6 +109,7 @@ namespace HangOn.Gameloop
                     isLetterInWord = true;
                     correctGuesses++;
                     GainLetterPoints();
+                    AddToLettersFound(inputLetter);
                     TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
                     lettersInWord[i].text = inputLetter;
                 }     
@@ -137,6 +147,8 @@ namespace HangOn.Gameloop
 
         public void NewWord()
         {
+            lettersFound.Clear();
+            lettersNotFound.Clear();
             foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
             {
                 Destroy(child.gameObject);
@@ -152,6 +164,7 @@ namespace HangOn.Gameloop
                 order++;
                 var temp = Instantiate(LetterContainer, wordContainer.transform);
                 LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
+                letterContainer.SetAttachedLetter(letter.ToString());
                 bool isFirstLetter = order == 0;
                 bool isLastLetter = order >= word.Length - 1;
                 if (isFirstLetter || isLastLetter)
@@ -164,9 +177,8 @@ namespace HangOn.Gameloop
                 {
                     letterContainer.HideLetter(letter.ToString());
                 }
-               
-            }
-            
+   
+            }       
         }
 
         public void TryDisableInKeyboard(string letter)
@@ -179,6 +191,7 @@ namespace HangOn.Gameloop
             Debug.Log("letter " + letter + " in inside the keyboard");
             Button button = keyboardButton.GetComponent<Button>();
             button.interactable = false;
+            lettersFound.Add(letter);
         }
 
         public void ResetKeyboard()
@@ -249,6 +262,81 @@ namespace HangOn.Gameloop
             currStageIndex++;
         }
 
-       
+        public void AddToLettersFound(string letter)
+        {
+            lettersFound.Add(letter);
+        }
+
+        public void RevealRandomLetter()
+        {
+            if (correctGuesses >= word.Length  - 2)
+                return;
+            #region debug+
+            /*
+             foreach(var letter in word)
+            {
+                order++;
+                bool isFirstLetter = order == 0;
+                bool isLastLetter = order >= word.Length - 1;
+                if (isFirstLetter || isLastLetter)
+                    continue;
+
+                var _letter = lettersFound.Where(x => x == letter.ToString()).FirstOrDefault();
+                if (_letter != null)
+                {
+                    Debug.Log("letter " + _letter + " has been found");
+                    continue;
+                }              
+            }
+            */
+            #endregion
+
+            int order = -1; 
+            foreach (var letter in word)
+            {
+                order++;
+                bool isFirstLetter = order == 0;
+                bool isLastLetter = order >= word.Length - 1;
+                bool isHidden = lettersNotFound.Find(x => x == letter.ToString()) != null;
+                bool isFound = lettersFound.Find(x => x == letter.ToString()) == null;
+
+
+                if (!isFirstLetter && !isLastLetter && isFound && !isHidden)
+                {
+                    lettersNotFound.Add(letter.ToString());
+                }
+                
+            }
+
+            Debug.Log("letters not found :");
+            foreach(var letter in lettersNotFound)
+            {
+                Debug.Log(letter);
+            }
+
+            int randomIndex = Random.Range(0, lettersNotFound.Count);
+            var ___letter = lettersNotFound[randomIndex].ToString();
+
+  
+            order = -1;
+            foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
+            {
+                
+                order++;
+                bool isFirstLetter = order == 0;
+                bool isLastLetter = order >= word.Length - 1;
+                if (isFirstLetter || isLastLetter)
+                    continue;
+
+                LetterContainer letterContainer = child.GetComponent<LetterContainer>();
+                if (letterContainer.AttachedLetter != ___letter)
+                    continue;
+
+                letterContainer.ShowLetter(letterContainer.AttachedLetter);
+                AddToLettersFound(letterContainer.AttachedLetter);
+                correctGuesses++;
+                lettersNotFound.Remove(letterContainer.AttachedLetter);
+            }
+        }
     }
 }

@@ -4611,7 +4611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649794852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2083383235}
+        m_TargetAssemblyTypeName: HangOn.Gameloop.HangmanManager, Assembly-CSharp
+        m_MethodName: RevealRandomLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &649794852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19307,6 +19319,8 @@ MonoBehaviour:
   score: 0
   letterBonus: 50
   wordBonus: 100
+  lettersFound: []
+  lettersNotFound: []
 --- !u!4 &2083383236
 Transform:
   m_ObjectHideFlags: 0
