@@ -1,5 +1,6 @@
 using HangOn.Navigation;
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -74,6 +75,7 @@ namespace HangOn.Gameloop
                 {
                     letterContainer.BlackUnderscore();
                     letterContainer.ShowLetter(letter.ToString());
+                    TryDisableInKeyboard(letter.ToString());
                 }
                 else
                 {
@@ -156,13 +158,27 @@ namespace HangOn.Gameloop
                 {
                     letterContainer.BlackUnderscore();
                     letterContainer.ShowLetter(letter.ToString());
+                    TryDisableInKeyboard(letter.ToString());
                 }
                 else
                 {
                     letterContainer.HideLetter(letter.ToString());
                 }
+               
             }
             
+        }
+
+        public void TryDisableInKeyboard(string letter)
+        {
+            var keyboardButton = keyboardButtons.Where(x => x.Letter.ToString() == letter).FirstOrDefault();
+
+            if (keyboardButton == null)
+                return;
+
+            Debug.Log("letter " + letter + " in inside the keyboard");
+            Button button = keyboardButton.GetComponent<Button>();
+            button.interactable = false;
         }
 
         public void ResetKeyboard()
