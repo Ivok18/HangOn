@@ -1,4 +1,5 @@
 using HangOn.Navigation;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,11 +47,12 @@ namespace HangOn.Gameloop
 
         private void Start()
         {
-            NewWord();   
+            StartCoroutine(NewWord(0.1f));  
         }
 
-        public void NewWord()
+        public IEnumerator NewWord(float waitTime)
         {
+            yield return new WaitForSeconds(waitTime);
             foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
             {
                 Destroy(child.gameObject);
@@ -126,8 +128,41 @@ namespace HangOn.Gameloop
             if(hasFoundWord)
             {
                 GainWordPoints();
+                StartCoroutine(NewWord(1f));
+                Reset_Word();
             }
+        }
 
+        public void NewWord()
+        {
+            foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
+            {
+                Destroy(child.gameObject);
+            }
+            do
+            {
+                word = GenerateWord().ToUpper();
+            } while (word.Length > 7);
+
+            int order = -1;
+            foreach (var letter in word)
+            {
+                order++;
+                var temp = Instantiate(LetterContainer, wordContainer.transform);
+                LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
+                bool isFirstLetter = order == 0;
+                bool isLastLetter = order >= word.Length - 1;
+                if (isFirstLetter || isLastLetter)
+                {
+                    letterContainer.BlackUnderscore();
+                    letterContainer.ShowLetter(letter.ToString());
+                }
+                else
+                {
+                    letterContainer.HideLetter(letter.ToString());
+                }
+            }
+            
         }
 
         public void ResetKeyboard()
@@ -158,7 +193,7 @@ namespace HangOn.Gameloop
             incorrectGuesses = 0;
         }
 
-        public void ResetGame()
+        public void Reset_Game()
         {
             ResetKeyboard();
             ResetHangman();
@@ -166,6 +201,14 @@ namespace HangOn.Gameloop
             ResetCorrectGuesses();
             ResetIncorrectGuesses();
             OnScoreChanged?.Invoke(0);
+        }
+
+        public void Reset_Word()
+        {
+            ResetKeyboard();
+            ResetHangman();
+            ResetIncorrectGuesses();
+            ResetCorrectGuesses();
         }
 
         public void SetStage(int stage)
@@ -189,5 +232,7 @@ namespace HangOn.Gameloop
         {
             currStageIndex++;
         }
+
+       
     }
 }
