@@ -3600,6 +3600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f048c6677334cc546842742f57b0dab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hangmanManager: {fileID: 2083383235}
+  scoreText: {fileID: 1296826238}
 --- !u!1 &453374686
 GameObject:
   m_ObjectHideFlags: 0

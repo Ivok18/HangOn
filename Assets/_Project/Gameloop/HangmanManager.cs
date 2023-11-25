@@ -41,6 +41,8 @@ namespace HangOn.Gameloop
         public GameObject LetterContainer => letterContainer;
         public GameObject WordContainer => wordContainer;
 
+        public int Score => score;
+
         private void Awake()
         {
             foreach(var keyboardButton in keyboardButtons)
