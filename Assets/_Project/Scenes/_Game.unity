@@ -2485,6 +2485,7 @@ GameObject:
   - component: {fileID: 307413136}
   - component: {fileID: 307413135}
   - component: {fileID: 307413134}
+  - component: {fileID: 307413137}
   m_Layer: 5
   m_Name: Button (main menu)
   m_TagString: Untagged
@@ -2557,6 +2558,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 307413137}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: AskConfirmMainMenu
@@ -2607,6 +2620,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307413132}
   m_CullTransparentMesh: 1
+--- !u!114 &307413137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307413132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &308443016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,6 +4767,7 @@ GameObject:
   - component: {fileID: 656757860}
   - component: {fileID: 656757859}
   - component: {fileID: 656757858}
+  - component: {fileID: 656757861}
   m_Layer: 5
   m_Name: Button (close)
   m_TagString: Untagged
@@ -4813,6 +4840,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 656757861}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1834785647}
         m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
         m_MethodName: Close
@@ -4863,6 +4902,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656757856}
   m_CullTransparentMesh: 1
+--- !u!114 &656757861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656757856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &667181876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5720,6 +5772,7 @@ GameObject:
   - component: {fileID: 750349459}
   - component: {fileID: 750349458}
   - component: {fileID: 750349457}
+  - component: {fileID: 750349460}
   m_Layer: 5
   m_Name: Button (confirm)
   m_TagString: Untagged
@@ -5792,6 +5845,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 750349460}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1834785647}
         m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
         m_MethodName: Close
@@ -5842,6 +5907,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750349455}
   m_CullTransparentMesh: 1
+--- !u!114 &750349460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750349455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &766620400
 GameObject:
   m_ObjectHideFlags: 0
@@ -10454,6 +10532,7 @@ GameObject:
   - component: {fileID: 1276318261}
   - component: {fileID: 1276318260}
   - component: {fileID: 1276318259}
+  - component: {fileID: 1276318262}
   m_Layer: 5
   m_Name: Button (highscores)
   m_TagString: Untagged
@@ -10526,6 +10605,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 307413137}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: Leaderboard
@@ -10576,6 +10667,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276318257}
   m_CullTransparentMesh: 1
+--- !u!114 &1276318262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276318257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1277955341
 GameObject:
   m_ObjectHideFlags: 0
@@ -10725,6 +10829,7 @@ GameObject:
   - component: {fileID: 1289596237}
   - component: {fileID: 1289596236}
   - component: {fileID: 1289596235}
+  - component: {fileID: 1289596238}
   m_Layer: 5
   m_Name: Button (settings)
   m_TagString: Untagged
@@ -10797,6 +10902,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 307413137}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: Settings
@@ -10847,6 +10964,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289596233}
   m_CullTransparentMesh: 1
+--- !u!114 &1289596238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289596233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1289984110
 GameObject:
   m_ObjectHideFlags: 0
@@ -13230,6 +13360,7 @@ GameObject:
   - component: {fileID: 1514476645}
   - component: {fileID: 1514476644}
   - component: {fileID: 1514476643}
+  - component: {fileID: 1514476646}
   m_Layer: 5
   m_Name: Button (validate)
   m_TagString: Untagged
@@ -13302,6 +13433,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1514476646}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: MainMenu
@@ -13352,6 +13495,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514476641}
   m_CullTransparentMesh: 1
+--- !u!114 &1514476646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514476641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1517548465
 GameObject:
   m_ObjectHideFlags: 0
@@ -15312,6 +15468,7 @@ GameObject:
   - component: {fileID: 1777542873}
   - component: {fileID: 1777542872}
   - component: {fileID: 1777542871}
+  - component: {fileID: 1777542874}
   m_Layer: 5
   m_Name: Button (try again)
   m_TagString: Untagged
@@ -15384,6 +15541,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1777542874}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: Game
@@ -15434,6 +15603,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777542869}
   m_CullTransparentMesh: 1
+--- !u!114 &1777542874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777542869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1784632171
 GameObject:
   m_ObjectHideFlags: 0
@@ -15446,6 +15628,7 @@ GameObject:
   - component: {fileID: 1784632175}
   - component: {fileID: 1784632174}
   - component: {fileID: 1784632173}
+  - component: {fileID: 1784632176}
   m_Layer: 5
   m_Name: Button (resume)
   m_TagString: Untagged
@@ -15530,6 +15713,18 @@ MonoBehaviour:
           m_StringArgument: pause
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 307413137}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pause
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1784632174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15568,6 +15763,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784632171}
   m_CullTransparentMesh: 1
+--- !u!114 &1784632176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784632171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1787301010
 GameObject:
   m_ObjectHideFlags: 0
@@ -16517,6 +16725,7 @@ GameObject:
   - component: {fileID: 1876663386}
   - component: {fileID: 1876663385}
   - component: {fileID: 1876663384}
+  - component: {fileID: 1876663387}
   m_Layer: 5
   m_Name: Button (Pause)
   m_TagString: Untagged
@@ -16589,6 +16798,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1876663387}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: Pause
@@ -16639,6 +16860,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876663382}
   m_CullTransparentMesh: 1
+--- !u!114 &1876663387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876663382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1883807269
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,6 +17399,7 @@ GameObject:
   - component: {fileID: 1919685668}
   - component: {fileID: 1919685667}
   - component: {fileID: 1919685666}
+  - component: {fileID: 1919685669}
   m_Layer: 5
   m_Name: Button (main menu)
   m_TagString: Untagged
@@ -17237,6 +17472,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1777542874}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1371710507}
         m_TargetAssemblyTypeName: HangOn.Navigation.UI_Game, Assembly-CSharp
         m_MethodName: AskConfirmMainMenu
@@ -17287,6 +17534,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919685664}
   m_CullTransparentMesh: 1
+--- !u!114 &1919685669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919685664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1926525791
 GameObject:
   m_ObjectHideFlags: 0
@@ -17375,6 +17635,7 @@ GameObject:
   - component: {fileID: 1934107539}
   - component: {fileID: 1934107538}
   - component: {fileID: 1934107537}
+  - component: {fileID: 1934107540}
   m_Layer: 5
   m_Name: 'Button (cancel) '
   m_TagString: Untagged
@@ -17447,6 +17708,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1514476646}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1834785647}
         m_TargetAssemblyTypeName: HangOn.Navigation.UIWindowManager, Assembly-CSharp
         m_MethodName: Close
@@ -17497,6 +17770,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934107535}
   m_CullTransparentMesh: 1
+--- !u!114 &1934107540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934107535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4e4c3917e0b765b43961b7357bb25b0c, type: 3}
 --- !u!1 &1952796436
 GameObject:
   m_ObjectHideFlags: 0
