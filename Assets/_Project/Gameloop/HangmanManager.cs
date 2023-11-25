@@ -3,11 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 namespace HangOn.Gameloop
 {
@@ -54,7 +51,7 @@ namespace HangOn.Gameloop
 
         private void Start()
         {
-            StartCoroutine(NewWord(0.1f));  
+            StartCoroutine(NewWord(0.1f));
         }
 
         public IEnumerator NewWord(float waitTime)
@@ -83,7 +80,7 @@ namespace HangOn.Gameloop
                 if (isFirstLetter || isLastLetter)
                 {
                     letterContainer.BlackUnderscore();
-                    letterContainer.ShowLetter(letter.ToString());
+                    ShowLetterIncludingClones(letter);
                     TryDisableInKeyboard(letter.ToString());
                 }
                 else
@@ -170,15 +167,32 @@ namespace HangOn.Gameloop
                 if (isFirstLetter || isLastLetter)
                 {
                     letterContainer.BlackUnderscore();
-                    letterContainer.ShowLetter(letter.ToString());
-                    TryDisableInKeyboard(letter.ToString());
+                    ShowLetterIncludingClones(letter);
+                    TryDisableInKeyboard(letter.ToString());                
+                    //letterContainer.ShowLetter(letter.ToString());               
+
                 }
                 else
                 {
                     letterContainer.HideLetter(letter.ToString());
                 }
-   
+                //Show clones
+                
             }       
+        }
+
+        private void ShowLetterIncludingClones(char letter)
+        {
+            List<LetterContainer> letterContainers = new();
+            foreach (LetterContainer letterContainer1 in wordContainer.GetComponentsInChildren<LetterContainer>())
+            {
+                letterContainers.Add(letterContainer1);
+            }
+            List<LetterContainer> clones = letterContainers.FindAll(x => x.AttachedLetter == letter.ToString());
+            foreach (var clone in clones)
+            {
+                clone.ShowLetter(clone.AttachedLetter);
+            }
         }
 
         public void TryDisableInKeyboard(string letter)
