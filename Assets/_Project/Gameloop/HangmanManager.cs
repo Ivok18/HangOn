@@ -14,7 +14,8 @@ namespace HangOn.Gameloop
         [SerializeField] private KeyboardButton[] keyboardButtons;
         [SerializeField] private GameObject letterContainer;
         [SerializeField] private GameObject wordContainer;
-        [SerializeField] private int correctGuesses;
+        [SerializeField] private int nbOfCorrectGuess;
+        [SerializeField] private int nbOfCorrectGuessLeft;
         [SerializeField] private int incorrectGuesses;
         [SerializeField] TextAsset possibleWord;
         [SerializeField] private string word;
@@ -68,27 +69,54 @@ namespace HangOn.Gameloop
                 word = GenerateWord().ToUpper();
             } while (word.Length > 7);
 
+            nbOfCorrectGuessLeft = word.Length;
+            var firstLetter = word[0];
+            var lastLetter = word[word.Length - 1];
+            if (firstLetter == lastLetter)
+            {
+                // Handle the case where the first and last letters are the same
+                Debug.Log("First and last letters are the same.");
+            }
+            //bool firstIsLast = word[0] == word[word.Length - 1];
             int order = -1;
             foreach (var letter in word)
             {
                 order++;
-                var temp = Instantiate(LetterContainer, wordContainer.transform);
-                LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
-                letterContainer.SetAttachedLetter(letter.ToString());
-                bool isFirstLetter = order == 0;
-                bool isLastLetter = order >= word.Length - 1;
-                if (isFirstLetter || isLastLetter)
+                CreateLetterContainer(letter, order);        
+            }
+        }
+
+        private void CreateLetterContainer(char letter,int order)
+        {
+            var temp = Instantiate(LetterContainer, wordContainer.transform);
+            LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
+            letterContainer.SetAttachedLetter(letter.ToString());
+            bool isFirstLetter = order == 0; ;
+            bool isLastLetter = order == word.Length - 1;
+            bool isDuplicate = word.IndexOf(letter) != word.LastIndexOf(letter);
+            if (isFirstLetter || isLastLetter)
+            {
+                letterContainer.ShowLetter(letter.ToString());
+                letterContainer.BlackUnderscore();
+                TryDisableInKeyboard(letter.ToString());
+                nbOfCorrectGuessLeft--;           
+            }
+            else
+            {
+                if(isDuplicate)
                 {
-                    letterContainer.BlackUnderscore();
-                    ShowLetterIncludingClones(letter);
-                    TryDisableInKeyboard(letter.ToString());
+                    letterContainer.ShowLetter(letter.ToString());
+                    nbOfCorrectGuessLeft--;
+                    Debug.Log($"Letter {letter} is a duplicate.");
                 }
                 else
                 {
                     letterContainer.HideLetter(letter.ToString());
-                }
+                    Debug.Log($"Letter {letter} is not a duplicate.");
+                }                
             }
         }
+
         public string GenerateWord()
         {
             string[] wordList = possibleWord.text.Split("\n");
@@ -104,7 +132,7 @@ namespace HangOn.Gameloop
                 if (inputLetter == word[i].ToString())
                 {
                     isLetterInWord = true;
-                    correctGuesses++;
+                    nbOfCorrectGuessLeft--;
                     GainLetterPoints();
                     AddToLettersFound(inputLetter);
                     TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
@@ -127,7 +155,7 @@ namespace HangOn.Gameloop
         public void CheckOutcome(int currentStageIndex)
         {
             bool hasRunEnded = currentStageIndex > lastStageIndex;
-            bool hasFoundWord = correctGuesses == word.Length - 2;
+            bool hasFoundWord = nbOfCorrectGuessLeft <= 0;
             if (hasRunEnded)
             {
                 // reset stage index to first stage index
@@ -155,33 +183,24 @@ namespace HangOn.Gameloop
                 word = GenerateWord().ToUpper();
             } while (word.Length > 7);
 
+            nbOfCorrectGuessLeft = word.Length;
+            var firstLetter = word[0];
+            var lastLetter = word[word.Length - 1];
+            if (firstLetter == lastLetter)
+            {
+                // Handle the case where the first and last letters are the same
+                Debug.Log("First and last letters are the same.");
+            }
+            //bool firstIsLast = word[0] == word[word.Length - 1];
             int order = -1;
             foreach (var letter in word)
             {
                 order++;
-                var temp = Instantiate(LetterContainer, wordContainer.transform);
-                LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
-                letterContainer.SetAttachedLetter(letter.ToString());
-                bool isFirstLetter = order == 0;
-                bool isLastLetter = order >= word.Length - 1;
-                if (isFirstLetter || isLastLetter)
-                {
-                    letterContainer.BlackUnderscore();
-                    ShowLetterIncludingClones(letter);
-                    TryDisableInKeyboard(letter.ToString());                
-                    //letterContainer.ShowLetter(letter.ToString());               
-
-                }
-                else
-                {
-                    letterContainer.HideLetter(letter.ToString());
-                }
-                //Show clones
-                
-            }       
+                CreateLetterContainer(letter, order);
+            }
         }
 
-        private void ShowLetterIncludingClones(char letter)
+        /*private void ShowLetterIncludingClones(char letter)
         {
             List<LetterContainer> letterContainers = new();
             foreach (LetterContainer letterContainer1 in wordContainer.GetComponentsInChildren<LetterContainer>())
@@ -192,8 +211,9 @@ namespace HangOn.Gameloop
             foreach (var clone in clones)
             {
                 clone.ShowLetter(clone.AttachedLetter);
+                nbOfCorrectGuessLeft--;
             }
-        }
+        }*/
 
         public void TryDisableInKeyboard(string letter)
         {
@@ -228,7 +248,7 @@ namespace HangOn.Gameloop
 
         public void ResetCorrectGuesses()
         {
-            correctGuesses = 0;
+            nbOfCorrectGuess = 0;
         }
 
         public void ResetIncorrectGuesses()
@@ -283,7 +303,7 @@ namespace HangOn.Gameloop
 
         public void RevealRandomLetter()
         {
-            if (correctGuesses >= word.Length  - 2)
+            if (nbOfCorrectGuess >= word.Length  - 2)
                 return;
             #region debug+
             /*
@@ -348,7 +368,7 @@ namespace HangOn.Gameloop
 
                 letterContainer.ShowLetter(letterContainer.AttachedLetter);
                 AddToLettersFound(letterContainer.AttachedLetter);
-                correctGuesses++;
+                nbOfCorrectGuess++;
                 lettersNotFound.Remove(letterContainer.AttachedLetter);
             }
         }
