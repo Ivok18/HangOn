@@ -8,15 +8,12 @@ namespace HangOn.Navigation
     {
         [SerializeField] private HangmanManager hangmanManager;
         [SerializeField] private TextMeshProUGUI scoreText;
+        private bool shouldRefreshUI;
+        private bool hasRefreshedUI;
 
         public static int id;
         private UIWindow window;
 
-      
-        private bool shouldRefreshUI;
-        private bool hasRefreshedUI;
-        
-       
         public delegate void OpenUIEndOfRunRequest(int uiWindowId);
         public static event OpenUIEndOfRunRequest OnOpenUIEndOfRunRequest;
 
@@ -42,7 +39,6 @@ namespace HangOn.Navigation
             shouldRefreshUI = true;
             if (shouldRefreshUI && !hasRefreshedUI)
             {
-                Debug.Log("REFRESH");
                 RefreshOnce();
             }
         }

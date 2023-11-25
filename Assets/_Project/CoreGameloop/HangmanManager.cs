@@ -35,7 +35,9 @@ namespace HangOn.Gameloop
 
         public delegate void ScoreChangedCallback(int newScore);
         public static event ScoreChangedCallback OnScoreChanged;
-      
+
+        public delegate void RunEndedCallback(int finalScore);
+        public static event RunEndedCallback OnRunEnded;
 
         public GameObject[] Stages => hangmanStages;
         public GameObject LetterContainer => letterContainer;
@@ -93,6 +95,7 @@ namespace HangOn.Gameloop
             var temp = Instantiate(LetterContainer, wordContainer.transform);
             LetterContainer letterContainer = temp.GetComponent<LetterContainer>();
             letterContainer.SetAttachedLetter(letter.ToString());
+
             bool isFirstLetter = order == 0; ;
             bool isLastLetter = order == word.Length - 1;
             bool isDuplicate = word.IndexOf(letter) != word.LastIndexOf(letter);
@@ -163,6 +166,8 @@ namespace HangOn.Gameloop
                 // reset stage index to first stage index
                 currStageIndex = 0;
                 UIEndOfRun.Open();
+
+                OnRunEnded?.Invoke(score);
             }
             if(hasFoundWord)
             {
@@ -172,6 +177,7 @@ namespace HangOn.Gameloop
             }
         }
 
+        //RUNTIME DEBUG
         public void NewWord()
         {
             lettersFound.Clear();

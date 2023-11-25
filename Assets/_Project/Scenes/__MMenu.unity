@@ -5986,6 +5986,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447945719}
   m_CullTransparentMesh: 1
+--- !u!1 &1466070662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466070663}
+  - component: {fileID: 1466070664}
+  m_Layer: 0
+  m_Name: LeaderboardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466070663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466070662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2125738435}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466070664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466070662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed849574c7f889e4eb4d7844c691621f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: 
+  firstScore: 0
+  secondScore: 0
+  thirdScore: 0
 --- !u!1 &1474976538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7895,6 +7943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5117b3fcfc8366340b935702bebd7879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text1st: {fileID: 1964067963}
+  text2nd: {fileID: 1810509476}
+  text3rd: {fileID: 1588488843}
 --- !u!1 &1810509474
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,6 +9382,7 @@ Transform:
   - {fileID: 1817124246}
   - {fileID: 140191360}
   - {fileID: 1402838666}
+  - {fileID: 1466070663}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
