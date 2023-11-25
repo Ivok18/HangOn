@@ -256,6 +256,11 @@ namespace HangOn.Gameloop
             incorrectGuesses = 0;
         }
 
+        public void ResetStage()
+        {
+            SetStage(1);
+        }
+
         public void Reset_Game()
         {
             ResetKeyboard();
@@ -268,8 +273,9 @@ namespace HangOn.Gameloop
 
         public void Reset_Word()
         {
-            ResetKeyboard();
             ResetHangman();
+            ResetKeyboard();
+            ResetStage();
             ResetIncorrectGuesses();
             ResetCorrectGuesses();
         }

@@ -11814,18 +11814,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2083383235}
         m_TargetAssemblyTypeName: HangOn.Gameloop.HangmanManager, Assembly-CSharp
-        m_MethodName: NewWord
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2083383235}
-        m_TargetAssemblyTypeName: HangOn.Gameloop.HangmanManager, Assembly-CSharp
         m_MethodName: Reset_Game
         m_Mode: 1
         m_Arguments:
@@ -11844,6 +11832,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2083383235}
+        m_TargetAssemblyTypeName: HangOn.Gameloop.HangmanManager, Assembly-CSharp
+        m_MethodName: NewWord
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -19311,7 +19311,8 @@ MonoBehaviour:
   - {fileID: 2006637962}
   letterContainer: {fileID: 5910037357656315788, guid: 9e5dd33ede3a7b9408186d0a3a93bfea, type: 3}
   wordContainer: {fileID: 1697673969}
-  correctGuesses: 0
+  nbOfCorrectGuess: 0
+  nbOfCorrectGuessLeft: 0
   incorrectGuesses: 0
   possibleWord: {fileID: 4900000, guid: 4815e5d659c537d4185aa5741113541c, type: 3}
   word: 
