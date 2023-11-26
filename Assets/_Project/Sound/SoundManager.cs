@@ -25,7 +25,7 @@ namespace UntangleGoats.Audio
             audioSource.volume = 1;
         }
 
-        public void PlaySound(AudioClip sound, float volume = 0.09f)
+        public void PlaySound(AudioClip sound, float volume = 1f)
         {
             if (sound == null)
                 return;

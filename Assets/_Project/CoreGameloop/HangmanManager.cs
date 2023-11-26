@@ -165,9 +165,9 @@ namespace HangOn.Gameloop
             {
                 // reset stage index to first stage index
                 currStageIndex = 0;
-                UIEndOfRun.Open();
-
                 OnRunEnded?.Invoke(score);
+                UIEndOfRun.Open();
+             
             }
             if(hasFoundWord)
             {

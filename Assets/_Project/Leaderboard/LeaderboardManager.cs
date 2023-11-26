@@ -20,6 +20,7 @@ namespace HangOn.Leaderboard
         public int Second => secondScore;
         public int Third => thirdScore;
 
+
         private void Awake()
         {
             if (Instance == null)
@@ -47,6 +48,7 @@ namespace HangOn.Leaderboard
 
         private void OnRunEnded(int score)
         {
+            Debug.Log("refresh 2");
             scores.Add(score);
             scores.Distinct();
             if(scores.Count < 3)

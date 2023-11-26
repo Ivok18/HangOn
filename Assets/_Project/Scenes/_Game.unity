@@ -3602,6 +3602,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hangmanManager: {fileID: 2083383235}
   scoreText: {fileID: 1296826238}
+  highscorePlaceholder: {fileID: 926703501}
+  firstScore: {fileID: 21300000, guid: 17829e38de63f97448dde4afd02dd194, type: 3}
+  firstScoreColor: {r: 1, g: 0.84313726, b: 0, a: 1}
+  secondScore: {fileID: 21300000, guid: fffa8f8f122c4624b8741ab3d366e23d, type: 3}
+  secondScoreColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  thirdScore: {fileID: 21300000, guid: 5e33595233ebf9549b5e04acc079ecfa, type: 3}
+  thirdScoreColor: {r: 0.5882353, g: 0.45490196, b: 0.26666668, a: 1}
 --- !u!1 &453374686
 GameObject:
   m_ObjectHideFlags: 0
@@ -7259,7 +7266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &926703500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7269,7 +7276,7 @@ RectTransform:
   m_GameObject: {fileID: 926703499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1027357}
@@ -7278,7 +7285,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 123, y: 145.8}
-  m_SizeDelta: {x: 59.381, y: 54.3037}
+  m_SizeDelta: {x: 157, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926703501
 MonoBehaviour:
@@ -7293,14 +7300,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fffa8f8f122c4624b8741ab3d366e23d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16565,7 +16572,7 @@ MonoBehaviour:
   - {fileID: 1031343797}
   Id: 1
   ShouldUIWindowsOverlap: 0
-  CurrWindowIndex: 4
+  CurrWindowIndex: 3
 --- !u!1 &1842156690
 GameObject:
   m_ObjectHideFlags: 0
