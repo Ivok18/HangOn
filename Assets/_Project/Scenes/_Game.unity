@@ -1520,6 +1520,7 @@ GameObject:
   - component: {fileID: 165253444}
   - component: {fileID: 165253443}
   - component: {fileID: 165253446}
+  - component: {fileID: 165253447}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -1592,6 +1593,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 165253443}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -1655,6 +1668,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 66
+--- !u!114 &165253447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165253441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &174063151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1829,7 @@ GameObject:
   - component: {fileID: 185378672}
   - component: {fileID: 185378671}
   - component: {fileID: 185378674}
+  - component: {fileID: 185378675}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -1875,6 +1902,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 185378671}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -1938,6 +1977,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 89
+--- !u!114 &185378675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185378669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &226057496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +2946,7 @@ GameObject:
   - component: {fileID: 337824971}
   - component: {fileID: 337824970}
   - component: {fileID: 337824973}
+  - component: {fileID: 337824974}
   m_Layer: 5
   m_Name: Button (9)
   m_TagString: Untagged
@@ -2966,6 +3019,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 337824970}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -3029,6 +3094,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 76
+--- !u!114 &337824974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337824968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &356501803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4276,6 +4354,7 @@ GameObject:
   - component: {fileID: 624526582}
   - component: {fileID: 624526581}
   - component: {fileID: 624526584}
+  - component: {fileID: 624526585}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -4348,6 +4427,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 624526581}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -4411,6 +4502,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 73
+--- !u!114 &624526585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624526579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &634117161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,6 +4679,7 @@ GameObject:
   - component: {fileID: 649794853}
   - component: {fileID: 649794852}
   - component: {fileID: 649794851}
+  - component: {fileID: 649794854}
   m_Layer: 5
   m_Name: Button (Hint)
   m_TagString: Untagged
@@ -4647,6 +4752,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 649794854}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2083383235}
         m_TargetAssemblyTypeName: HangOn.Gameloop.HangmanManager, Assembly-CSharp
         m_MethodName: RevealRandomLetter
@@ -4697,6 +4814,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649794849}
   m_CullTransparentMesh: 1
+--- !u!114 &649794854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649794849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 5d1629493b78b4f49845394bc55523a8, type: 3}
 --- !u!1 &655794020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,6 +5379,7 @@ GameObject:
   - component: {fileID: 695458991}
   - component: {fileID: 695458990}
   - component: {fileID: 695458993}
+  - component: {fileID: 695458994}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -5321,6 +5452,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 695458990}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -5384,6 +5527,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 81
+--- !u!114 &695458994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695458988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,6 +5717,7 @@ GameObject:
   - component: {fileID: 741268464}
   - component: {fileID: 741268463}
   - component: {fileID: 741268466}
+  - component: {fileID: 741268467}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -5633,6 +5790,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 741268463}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -5696,6 +5865,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 78
+--- !u!114 &741268467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741268461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &742094577
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +6416,7 @@ GameObject:
   - component: {fileID: 807964727}
   - component: {fileID: 807964726}
   - component: {fileID: 807964729}
+  - component: {fileID: 807964730}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -6306,6 +6489,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 807964726}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -6369,6 +6564,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 65
+--- !u!114 &807964730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807964724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &808086183
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,6 +7322,7 @@ GameObject:
   - component: {fileID: 925056305}
   - component: {fileID: 925056304}
   - component: {fileID: 925056307}
+  - component: {fileID: 925056308}
   m_Layer: 5
   m_Name: Button (10)
   m_TagString: Untagged
@@ -7186,6 +7395,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 925056304}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -7249,6 +7470,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 77
+--- !u!114 &925056308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925056302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &926703499
 GameObject:
   m_ObjectHideFlags: 0
@@ -7414,6 +7648,7 @@ GameObject:
   - component: {fileID: 931300481}
   - component: {fileID: 931300480}
   - component: {fileID: 931300483}
+  - component: {fileID: 931300484}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -7486,6 +7721,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 931300480}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -7549,6 +7796,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 82
+--- !u!114 &931300484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931300478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &932136734
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,6 +8328,7 @@ GameObject:
   - component: {fileID: 999389523}
   - component: {fileID: 999389522}
   - component: {fileID: 999389525}
+  - component: {fileID: 999389526}
   m_Layer: 5
   m_Name: Button (9)
   m_TagString: Untagged
@@ -8140,6 +8401,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 999389522}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -8203,6 +8476,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 79
+--- !u!114 &999389526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999389520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1011920899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8427,6 +8713,7 @@ GameObject:
   - component: {fileID: 1017894497}
   - component: {fileID: 1017894496}
   - component: {fileID: 1017894499}
+  - component: {fileID: 1017894500}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -8499,6 +8786,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1017894496}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -8562,6 +8861,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 88
+--- !u!114 &1017894500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017894494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1022802955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8575,6 +8887,7 @@ GameObject:
   - component: {fileID: 1022802958}
   - component: {fileID: 1022802957}
   - component: {fileID: 1022802960}
+  - component: {fileID: 1022802961}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -8647,6 +8960,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1022802957}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -8710,6 +9035,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 67
+--- !u!114 &1022802961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022802955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1031343795
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,6 +9128,7 @@ GameObject:
   - component: {fileID: 1043751615}
   - component: {fileID: 1043751614}
   - component: {fileID: 1043751617}
+  - component: {fileID: 1043751618}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -8862,6 +9201,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1043751614}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -8925,6 +9276,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 86
+--- !u!114 &1043751618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043751612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1076400543
 GameObject:
   m_ObjectHideFlags: 0
@@ -9284,6 +9648,7 @@ GameObject:
   - component: {fileID: 1151351283}
   - component: {fileID: 1151351282}
   - component: {fileID: 1151351285}
+  - component: {fileID: 1151351286}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -9356,6 +9721,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1151351282}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -9419,6 +9796,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 75
+--- !u!114 &1151351286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151351280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1182724021
 GameObject:
   m_ObjectHideFlags: 0
@@ -10249,6 +10639,7 @@ GameObject:
   - component: {fileID: 1269768871}
   - component: {fileID: 1269768870}
   - component: {fileID: 1269768873}
+  - component: {fileID: 1269768874}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -10321,6 +10712,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1269768870}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -10384,6 +10787,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 71
+--- !u!114 &1269768874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269768868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1273815660
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,6 +10813,7 @@ GameObject:
   - component: {fileID: 1273815663}
   - component: {fileID: 1273815662}
   - component: {fileID: 1273815665}
+  - component: {fileID: 1273815666}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -10469,6 +10886,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1273815662}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -10532,6 +10961,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 90
+--- !u!114 &1273815666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273815660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1276318257
 GameObject:
   m_ObjectHideFlags: 0
@@ -11658,6 +12100,7 @@ GameObject:
   - component: {fileID: 1331758488}
   - component: {fileID: 1331758487}
   - component: {fileID: 1331758490}
+  - component: {fileID: 1331758491}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -11730,6 +12173,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 165253447}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1331758487}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -11793,6 +12248,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 87
+--- !u!114 &1331758491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331758485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1355097081
 GameObject:
   m_ObjectHideFlags: 0
@@ -12313,6 +12781,7 @@ GameObject:
   - component: {fileID: 1434960885}
   - component: {fileID: 1434960884}
   - component: {fileID: 1434960887}
+  - component: {fileID: 1434960888}
   m_Layer: 5
   m_Name: Button (10)
   m_TagString: Untagged
@@ -12385,6 +12854,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1434960884}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -12448,6 +12929,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 80
+--- !u!114 &1434960888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434960882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1452726409
 GameObject:
   m_ObjectHideFlags: 0
@@ -12461,6 +12955,7 @@ GameObject:
   - component: {fileID: 1452726412}
   - component: {fileID: 1452726411}
   - component: {fileID: 1452726414}
+  - component: {fileID: 1452726415}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -12533,6 +13028,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1452726411}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -12596,6 +13103,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 68
+--- !u!114 &1452726415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452726409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1456223869
 GameObject:
   m_ObjectHideFlags: 0
@@ -12820,6 +13340,7 @@ GameObject:
   - component: {fileID: 1478384859}
   - component: {fileID: 1478384858}
   - component: {fileID: 1478384861}
+  - component: {fileID: 1478384862}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -12892,6 +13413,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1478384858}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -12955,6 +13488,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 70
+--- !u!114 &1478384862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478384856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1481359178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13609,6 +14155,7 @@ GameObject:
   - component: {fileID: 1580039147}
   - component: {fileID: 1580039146}
   - component: {fileID: 1580039149}
+  - component: {fileID: 1580039150}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -13681,6 +14228,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1580039146}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -13744,6 +14303,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 83
+--- !u!114 &1580039150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580039144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1600856947
 GameObject:
   m_ObjectHideFlags: 0
@@ -14911,6 +15483,7 @@ GameObject:
   - component: {fileID: 1716625188}
   - component: {fileID: 1716625187}
   - component: {fileID: 1716625190}
+  - component: {fileID: 1716625191}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -14983,6 +15556,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1716625187}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -15046,6 +15631,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 84
+--- !u!114 &1716625191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716625185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1720223856
 GameObject:
   m_ObjectHideFlags: 0
@@ -15801,6 +16399,7 @@ GameObject:
   - component: {fileID: 1787301013}
   - component: {fileID: 1787301012}
   - component: {fileID: 1787301015}
+  - component: {fileID: 1787301016}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -15873,6 +16472,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1787301012}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -15936,6 +16547,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 69
+--- !u!114 &1787301016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787301010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1791271883
 GameObject:
   m_ObjectHideFlags: 0
@@ -18095,6 +18719,7 @@ GameObject:
   - component: {fileID: 1968690837}
   - component: {fileID: 1968690836}
   - component: {fileID: 1968690839}
+  - component: {fileID: 1968690840}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -18167,6 +18792,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1968690836}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -18230,6 +18867,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 74
+--- !u!114 &1968690840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968690834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &1985432345
 GameObject:
   m_ObjectHideFlags: 0
@@ -19620,6 +20270,9 @@ MonoBehaviour:
   wordBonus: 100
   lettersFound: []
   lettersNotFound: []
+  correctLetterSfx: {fileID: 8300000, guid: 7c3ef6ca452649c43a3618ccfda0a18f, type: 3}
+  correctWordSfx: {fileID: 8300000, guid: d4230cea181b9ac429684fcdfd39fcd3, type: 3}
+  incorrectLetterSfx: {fileID: 8300000, guid: 3282e24d3de341d42a7fb131161cd063, type: 3}
 --- !u!4 &2083383236
 Transform:
   m_ObjectHideFlags: 0
@@ -19820,6 +20473,7 @@ GameObject:
   - component: {fileID: 2124007070}
   - component: {fileID: 2124007069}
   - component: {fileID: 2124007072}
+  - component: {fileID: 2124007073}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -19892,6 +20546,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185378675}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2124007069}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -19955,6 +20621,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 85
+--- !u!114 &2124007073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124007067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}
 --- !u!1 &2137536521
 GameObject:
   m_ObjectHideFlags: 0
@@ -19968,6 +20647,7 @@ GameObject:
   - component: {fileID: 2137536524}
   - component: {fileID: 2137536523}
   - component: {fileID: 2137536526}
+  - component: {fileID: 2137536527}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -20040,6 +20720,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 337824974}
+        m_TargetAssemblyTypeName: UntangleGoats.Audio.SoundPlayer, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2137536523}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -20103,3 +20795,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: 72
+--- !u!114 &2137536527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137536521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f369c0cb30cc45a59603587907b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 7bcd3c6e97cde0043977cd092753c1d9, type: 3}

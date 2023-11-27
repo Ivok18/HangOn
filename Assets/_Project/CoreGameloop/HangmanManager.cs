@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UntangleGoats.Audio;
 
 namespace HangOn.Gameloop
 {
@@ -25,6 +26,9 @@ namespace HangOn.Gameloop
         [SerializeField] private int wordBonus;
         [SerializeField] private List<string> lettersFound;
         [SerializeField] private List<string> lettersNotFound;
+        [SerializeField] private AudioClip correctLetterSfx;
+        [SerializeField] private AudioClip correctWordSfx;
+        [SerializeField] private AudioClip incorrectLetterSfx;
         private int lastStageIndex = 11;
 
         public delegate void IncorrectGuessCallback(int currStageIndex);
@@ -151,6 +155,7 @@ namespace HangOn.Gameloop
                 bool hasRunEnded = currStageIndex > lastStageIndex;
                 if (!hasRunEnded)
                 {
+                    SoundManager.Instance.PlaySound(incorrectLetterSfx);
                     OnIncorrectGuess?.Invoke(currStageIndex);
                 }               
             }
@@ -296,12 +301,17 @@ namespace HangOn.Gameloop
         public void GainLetterPoints()
         {
             score += letterBonus;
+            if(nbOfCorrectGuessLeft > 0)
+            {
+                SoundManager.Instance.PlaySound(correctLetterSfx);
+            } 
             OnScoreChanged?.Invoke(score);
         }
 
         public void GainWordPoints()
         {
             score += wordBonus;
+            SoundManager.Instance.PlaySound(correctWordSfx);
             OnScoreChanged?.Invoke(score);
         }
 
