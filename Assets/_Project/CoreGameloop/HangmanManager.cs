@@ -138,7 +138,7 @@ namespace HangOn.Gameloop
         public string GenerateWord()
         {
             string[] wordList = possibleWord.text.Split("\n");
-            string line = wordList[Random.Range(0, wordList.Length - 1)];
+            string line = wordList[Random.Range(0, wordList.Length)];
             return line.Substring(0, line.Length - 1);
         }
 
@@ -208,6 +208,7 @@ namespace HangOn.Gameloop
             }
             do
             {
+                Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
             } while (word.Length > 7);
 
