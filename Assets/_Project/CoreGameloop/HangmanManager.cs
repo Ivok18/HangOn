@@ -1,3 +1,5 @@
+using DG.Tweening;
+using HangOn.Animations;
 using HangOn.Navigation;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,12 +45,18 @@ namespace HangOn.Gameloop
         public delegate void RunEndedCallback(int finalScore);
         public static event RunEndedCallback OnRunEnded;
 
+        public delegate void GuessedLetterCallback(LetterContainer letterContainer);
+        public static event GuessedLetterCallback OnLetterGuessed;
+
+        public delegate void GuessedWordCallback();
+        public static event GuessedWordCallback OnWordGuessed;
+
         public GameObject[] Stages => hangmanStages;
         public GameObject LetterContainer => letterContainer;
         public GameObject WordContainer => wordContainer;
 
         public int Score => score;
-
+        
         private void Awake()
         {
             foreach(var keyboardButton in keyboardButtons)
@@ -106,6 +114,7 @@ namespace HangOn.Gameloop
             if (isFirstLetter || isLastLetter)
             {
                 letterContainer.ShowLetter(letter.ToString());
+                letterContainer.DisableCross();
                 letterContainer.BlackUnderscore();
                 TryDisableInKeyboard(letter.ToString());
                 nbOfCorrectGuessLeft--;           
@@ -146,6 +155,9 @@ namespace HangOn.Gameloop
                     AddToLettersFound(inputLetter);
                     TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
                     lettersInWord[i].text = inputLetter;
+                    var letterContainer = WordContainer.GetComponentsInChildren<LetterContainer>().Where(x => x.AttachedLetter == inputLetter).FirstOrDefault();
+
+                    OnLetterGuessed?.Invoke(letterContainer);
                 }     
             }
             if (!isLetterInWord)
@@ -179,6 +191,9 @@ namespace HangOn.Gameloop
                 GainWordPoints();
                 StartCoroutine(NewWord(1f));
                 Reset_Word();
+                OnWordGuessed?.Invoke();
+
+                Game_Anim1_FindWord.Play();
             }
         }
 

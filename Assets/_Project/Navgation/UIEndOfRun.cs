@@ -8,8 +8,8 @@ namespace HangOn.Navigation
 {
     public class UIEndOfRun : MonoBehaviour
     {
-        [SerializeField] private HangmanManager hangmanManager;
-        [SerializeField] private TextMeshProUGUI scoreText;
+
+        [Header("Leaderboard Settings")]
         [SerializeField] private Image highscorePlaceholder;
         [SerializeField] private Sprite firstScore;
         [SerializeField] private Color firstScoreColor;
@@ -17,12 +17,17 @@ namespace HangOn.Navigation
         [SerializeField] private Color secondScoreColor;
         [SerializeField] private Sprite thirdScore;
         [SerializeField] private Color thirdScoreColor;
+
+
+        [Header("Other")]
+        [SerializeField] private HangmanManager hangmanManager;
+        [SerializeField] private TextMeshProUGUI scoreText;
+        public static int id;
+        private UIWindow window;
         private bool shouldRefreshUI;
         private bool hasRefreshedUI;
 
-        public static int id;
-        private UIWindow window;
-
+      
         public delegate void OpenUIEndOfRunRequest(int uiWindowId);
         public static event OpenUIEndOfRunRequest OnOpenUIEndOfRunRequest;
 
@@ -62,6 +67,7 @@ namespace HangOn.Navigation
                 highscorePlaceholder.gameObject.SetActive(true);
                 highscorePlaceholder.sprite = firstScore;
                 highscorePlaceholder.color = firstScoreColor;
+                Game_EndOfRun_Anim1_GoldMedal.Play();
             }
             else if (score == LeaderboardManager.Instance.Second)
             {
@@ -69,6 +75,7 @@ namespace HangOn.Navigation
                 highscorePlaceholder.gameObject.SetActive(true);
                 highscorePlaceholder.sprite = secondScore;
                 highscorePlaceholder.color = secondScoreColor;
+                Game_EndOfRun_Anim1_SilverMedal.Play();
             }
             else if (score == LeaderboardManager.Instance.Third)
             {
@@ -76,6 +83,7 @@ namespace HangOn.Navigation
                 highscorePlaceholder.gameObject.SetActive(true);
                 highscorePlaceholder.sprite = thirdScore;
                 highscorePlaceholder.color = thirdScoreColor;
+                Game_EndOfRun_Anim1_BronzeMedal.Play();
             }
             else
             {

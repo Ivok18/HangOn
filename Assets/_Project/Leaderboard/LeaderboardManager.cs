@@ -1,10 +1,7 @@
 using HangOn.Gameloop;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace HangOn.Leaderboard
 {
@@ -60,6 +57,8 @@ namespace HangOn.Leaderboard
             secondScore = scores[1];
             thirdScore = scores[2];
         }
+
+       
 
     }
 }

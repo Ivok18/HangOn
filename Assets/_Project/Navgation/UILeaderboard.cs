@@ -1,4 +1,3 @@
-using HangOn.Gameloop;
 using HangOn.Leaderboard;
 using TMPro;
 using UnityEngine;
