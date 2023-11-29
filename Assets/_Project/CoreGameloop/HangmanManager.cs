@@ -208,7 +208,6 @@ namespace HangOn.Gameloop
             }
             do
             {
-                Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
             } while (word.Length > 7);
 
