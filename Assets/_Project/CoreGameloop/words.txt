@@ -34,7 +34,6 @@ jellybean
 crayon
 jigsaw
 balloon
-fuzzy
 bedtime
 dream
 rainbow
@@ -45,7 +44,6 @@ star
 sunny
 happy
 jump
-radiant
 blissful
 jellybean
 playful
