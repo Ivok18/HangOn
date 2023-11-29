@@ -32,6 +32,7 @@ namespace HangOn.Gameloop
         [SerializeField] private AudioClip correctWordSfx;
         [SerializeField] private AudioClip incorrectLetterSfx;
         private int lastStageIndex = 11;
+        HashSet<string> generatedWords = new HashSet<string>(); // Keep track of generated words
 
         public delegate void IncorrectGuessCallback(int currStageIndex);
         public static event IncorrectGuessCallback OnIncorrectGuess;
@@ -82,8 +83,12 @@ namespace HangOn.Gameloop
             }
             do
             {
+                Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
-            } while (word.Length > 7);
+            } while (word.Length > 7 || generatedWords.Contains(word));
+
+            // Add the newly generated word to the set
+            generatedWords.Add(word);
 
             nbOfCorrectGuessLeft = word.Length;
             var firstLetter = word[0];
@@ -138,7 +143,9 @@ namespace HangOn.Gameloop
         public string GenerateWord()
         {
             string[] wordList = possibleWord.text.Split("\n");
-            string line = wordList[Random.Range(0, wordList.Length)];
+            wordList = wordList.Distinct().ToArray();
+            Debug.Log(wordList.Length);
+            string line = wordList[Random.Range(0, wordList.Length)];          
             return line.Substring(0, line.Length - 1);
         }
 
@@ -208,8 +215,12 @@ namespace HangOn.Gameloop
             }
             do
             {
+                Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
-            } while (word.Length > 7);
+            } while (word.Length > 7 || generatedWords.Contains(word));
+
+            // Add the newly generated word to the set
+            generatedWords.Add(word);
 
             nbOfCorrectGuessLeft = word.Length;
             var firstLetter = word[0];
