@@ -90,7 +90,7 @@ namespace HangOn.Navigation
                 // Disable placeholder
                 highscorePlaceholder.gameObject.SetActive(false);
             }
-            scoreText.text = score.ToString() + "P";
+            scoreText.text = score.ToString();
         }
 
         public void RefreshOnce()

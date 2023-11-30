@@ -48,9 +48,9 @@ namespace HangOn.Navigation
             Debug.Log(LeaderboardManager.Instance.First);
             Debug.Log(LeaderboardManager.Instance.Second);
             Debug.Log(LeaderboardManager.Instance.Third);
-            text1st.text = LeaderboardManager.Instance.First.ToString() + "P";
-            text2nd.text = LeaderboardManager.Instance.Second.ToString() + "P";
-            text3rd.text = LeaderboardManager.Instance.Third.ToString() + "P"; 
+            text1st.text = LeaderboardManager.Instance.First.ToString();
+            text2nd.text = LeaderboardManager.Instance.Second.ToString();
+            text3rd.text = LeaderboardManager.Instance.Third.ToString();
         }
 
         public void RefreshOnce()
