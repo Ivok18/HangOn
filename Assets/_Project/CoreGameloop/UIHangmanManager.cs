@@ -10,11 +10,14 @@ namespace HangOn.Gameloop
         {
             HangmanManager.OnIncorrectGuess += OnIncorrectGuess;
             HangmanManager.OnResetHangman += OnResetHangman;
+            HangmanManager.OnRewindHangman += OnRewindHangman;
+
         }
         private void OnDisable()
         {
             HangmanManager.OnIncorrectGuess -= OnIncorrectGuess;
             HangmanManager.OnResetHangman -= OnResetHangman;
+            HangmanManager.OnRewindHangman -= OnRewindHangman;
         }
         
         private void OnIncorrectGuess(int currStageIndex)
@@ -50,6 +53,28 @@ namespace HangOn.Gameloop
             }
             //hangmanContainer.Stages[currStageIndex].SetActive(false);
             hangmanContainer.Stages[0].SetActive(true);
+        }
+
+        private void OnRewindHangman(int currStageIndex, int rewindCount)
+        {
+            if(currStageIndex < 0)
+            {
+                for (int i = 1; i < hangmanContainer.Stages.Length; i++)
+                {
+                    hangmanContainer.Stages[i].SetActive(false);
+                }
+                //hangmanContainer.Stages[currStageIndex].SetActive(false);
+                hangmanContainer.Stages[0].SetActive(true);
+            }
+            else
+            {
+                for (int i = 0; i < hangmanContainer.Stages.Length; i++)
+                {
+                    hangmanContainer.Stages[i].SetActive(false);
+                }
+                hangmanContainer.Stages[currStageIndex].SetActive(true);
+            }
+            
         }
     }
 }

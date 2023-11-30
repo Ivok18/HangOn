@@ -4,7 +4,6 @@ using HangOn.Navigation;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +29,9 @@ namespace HangOn.Gameloop
         [SerializeField] private AudioClip correctLetterSfx;
         [SerializeField] private AudioClip correctWordSfx;
         [SerializeField] private AudioClip incorrectLetterSfx;
+        [SerializeField] private int rewindCount;
         bool hasUsedHint;
+        
         private int lastStageIndex = 11;
         HashSet<string> generatedWords; // Keep track of generated words
 
@@ -39,6 +40,9 @@ namespace HangOn.Gameloop
 
         public delegate void ResetHangmanCallback(int currStageIndex);
         public static event ResetHangmanCallback OnResetHangman;
+
+        public delegate void RewindHangmanCallback(int currStageIndex, int rewindCounr);
+        public static event RewindHangmanCallback OnRewindHangman;
 
         public delegate void ScoreChangedCallback(int newScore);
         public static event ScoreChangedCallback OnScoreChanged;
@@ -109,7 +113,8 @@ namespace HangOn.Gameloop
                 order++;
                 CreateLetterContainer(letter, order);        
             }
-            ResetHangman();
+            //ResetHangman();
+            //RewindHangman(rewindCount);
         }
 
         private void CreateLetterContainer(char letter,int order)
@@ -202,7 +207,7 @@ namespace HangOn.Gameloop
             if(hasFoundWord)
             {
                 GainWordPoints();
-                Reset_Round();
+                Reset_Round();            
                 StartCoroutine(NewWord(1f));
                 OnWordGuessed?.Invoke(wordBonus);
                 Game_Anim1_FindWord.Play();
@@ -284,6 +289,12 @@ namespace HangOn.Gameloop
         {
             OnResetHangman?.Invoke(currStageIndex);
         }
+         
+        public void RewindHangman(int rewindCount)
+        {
+            currStageIndex -= rewindCount;
+            OnRewindHangman?.Invoke(currStageIndex, rewindCount);
+        }
 
         public void ResetScore()
         {
@@ -319,7 +330,8 @@ namespace HangOn.Gameloop
         {
             //ResetHangman();
             ResetKeyboard();
-            ResetStage();
+            RewindHangman(rewindCount);
+            //ResetStage();
             ResetIncorrectGuesses();
             ResetCorrectGuesses();
             EnableHint();

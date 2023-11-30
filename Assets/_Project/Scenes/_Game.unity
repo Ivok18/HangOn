@@ -22549,6 +22549,7 @@ MonoBehaviour:
   correctLetterSfx: {fileID: 8300000, guid: 7c3ef6ca452649c43a3618ccfda0a18f, type: 3}
   correctWordSfx: {fileID: 8300000, guid: d4230cea181b9ac429684fcdfd39fcd3, type: 3}
   incorrectLetterSfx: {fileID: 8300000, guid: 3282e24d3de341d42a7fb131161cd063, type: 3}
+  rewindCount: 2
 --- !u!4 &2083383236
 Transform:
   m_ObjectHideFlags: 0
