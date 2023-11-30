@@ -14994,8 +14994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animTarget: {fileID: 0}
   startOfPath: {fileID: 0}
-  verticalDistance: 10
-  animDuration: 0.3
+  verticalDistance: 11
+  animDuration: 0.5
 --- !u!1 &1618171876
 GameObject:
   m_ObjectHideFlags: 0
