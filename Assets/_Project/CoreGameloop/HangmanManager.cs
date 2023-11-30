@@ -161,10 +161,10 @@ namespace HangOn.Gameloop
                     nbOfCorrectGuessLeft--;
                     GainLetterPoints();
                     AddToLettersFound(inputLetter);
-                    TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
-                    lettersInWord[i].text = inputLetter;
+                    //TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
+                    //lettersInWord[i].text = inputLetter;
                     var letterContainer = WordContainer.GetComponentsInChildren<LetterContainer>().Where(x => x.AttachedLetter == inputLetter).FirstOrDefault();
-                    
+                   
                     OnLetterGuessed?.Invoke(letterContainer);
                 }     
             }

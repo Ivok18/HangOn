@@ -11,7 +11,7 @@ namespace HangOn.Animations
         [SerializeField] private GameObject startOfPath;
         [SerializeField] private float verticalDistance;
         [SerializeField] private float animDuration;    
-        private bool shouldDestroy;
+        private bool shouldKillTween;
 
         public delegate void PlayFindLetterAnimRequestCallback(int id);
         public static event PlayFindLetterAnimRequestCallback OnRequestPlayFindLetterAnim;
@@ -42,11 +42,11 @@ namespace HangOn.Animations
 
         private void Update()
         {
-            if (shouldDestroy)
+            /*if (shouldKillTween)
             {
                 Destroy(animTarget.gameObject);
-                shouldDestroy = false;
-            }
+                shouldKillTween = false;
+            }*/
         }
 
         private void OnLetterGuessed(LetterContainer letterContainer)
@@ -59,8 +59,10 @@ namespace HangOn.Animations
 
         private void SetupAnimAndStart(Transform animTarget)
         {
+            DOTween.KillAll();
             Tween tween = animTarget.DOMoveY(startOfPath.transform.position.y + verticalDistance, animDuration, true).SetEase(Ease.Linear);
-            tween.OnComplete(() => shouldDestroy = true);
+            tween.OnKill(() => animTarget.gameObject.SetActive(false));
+            tween.OnComplete(() => tween.Kill(animTarget));
         }
 
         public static void Play()

@@ -45,10 +45,10 @@ namespace HangOn.Gameloop
 
         private void OnLetterGuessed(LetterContainer letterContainer)
         {
-            if (letterContainer != this)
+            if (letterContainer.AttachedLetter != attachedLetter)
                 return;
 
-            //ShowLetter(AttachedLetter);
+            ShowLetter(AttachedLetter);
             isVisible = true;
         }
 
