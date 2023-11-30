@@ -10,12 +10,14 @@ namespace HangOn.Animations
     {
         private static int id;
         [SerializeField] private Transform animTarget;
+        [SerializeField] private GameObject nullifyRaycast;
         [SerializeField] private float timeBetweenShakes;
         [SerializeField] private float shakeAngle;
         [SerializeField] private float maxScale;
         [SerializeField] private float minScale;
         [SerializeField] private float growDuration;
         [SerializeField] private float shrinkDuration;
+    
 
         public delegate void PlayFindWordAnimRequestCallback(int id);
         public static event PlayFindWordAnimRequestCallback OnRequestPlayFindWordAnim;
@@ -45,6 +47,7 @@ namespace HangOn.Animations
         private void OnWordGuessed(int wordBonus)
         {
             animTarget.gameObject.SetActive(true);
+            nullifyRaycast.SetActive(true);
             animTarget.GetComponentInChildren<TextMeshProUGUI>().text = wordBonus.ToString();
         }
             
@@ -96,7 +99,8 @@ namespace HangOn.Animations
             subSequence.Append(tween5);
 
             sequence.Append(subSequence);
-            sequence.OnComplete(() => animTarget.gameObject.SetActive(false)); 
+            sequence.OnComplete(() => animTarget.gameObject.SetActive(false));
+            sequence.OnComplete(() => nullifyRaycast.SetActive(false));
         }
 
         public static void Play()

@@ -89,7 +89,7 @@ namespace HangOn.Gameloop
             {
                 Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
-            } while (word.Length > 7 || generatedWords.Contains(word));
+            } while (word.Length > 7 || generatedWords.Contains(word) || word.EndsWith("s"));
 
             // Add the newly generated word to the set
             generatedWords.Add(word);
@@ -222,7 +222,7 @@ namespace HangOn.Gameloop
             {
                 Random.InitState((int)System.DateTime.Now.Ticks);
                 word = GenerateWord().ToUpper();
-            } while (word.Length > 7 || generatedWords.Contains(word));
+            } while (word.Length > 7 || word.Length < 3 || generatedWords.Contains(word) || word.EndsWith("s"));
 
             // Add the newly generated word to the set
             generatedWords.Add(word);
