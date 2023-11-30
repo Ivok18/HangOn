@@ -31,7 +31,7 @@ namespace HangOn.Gameloop
         [SerializeField] private AudioClip incorrectLetterSfx;
         bool hasUsedHint;
         private int lastStageIndex = 11;
-        HashSet<string> generatedWords = new HashSet<string>(); // Keep track of generated words
+        HashSet<string> generatedWords; // Keep track of generated words
 
         public delegate void IncorrectGuessCallback(int currStageIndex);
         public static event IncorrectGuessCallback OnIncorrectGuess;
@@ -71,6 +71,7 @@ namespace HangOn.Gameloop
 
         private void Start()
         {
+            generatedWords = new HashSet<string>();
             StartCoroutine(NewWord(0.1f));
         }
 
