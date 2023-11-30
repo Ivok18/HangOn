@@ -31,6 +31,7 @@ namespace HangOn.Gameloop
         [SerializeField] private AudioClip correctLetterSfx;
         [SerializeField] private AudioClip correctWordSfx;
         [SerializeField] private AudioClip incorrectLetterSfx;
+        bool hasUsedHint;
         private int lastStageIndex = 11;
         HashSet<string> generatedWords = new HashSet<string>(); // Keep track of generated words
 
@@ -51,6 +52,9 @@ namespace HangOn.Gameloop
 
         public delegate void GuessedWordCallback();
         public static event GuessedWordCallback OnWordGuessed;
+
+        public delegate void RoundResetCallback();
+        public static event RoundResetCallback OnRoundReset;
 
         public GameObject[] Stages => hangmanStages;
         public GameObject LetterContainer => letterContainer;
@@ -198,7 +202,8 @@ namespace HangOn.Gameloop
             {
                 GainWordPoints();
                 StartCoroutine(NewWord(1f));
-                Reset_Word();
+                Reset_Round();
+
                 OnWordGuessed?.Invoke();
 
                 Game_Anim1_FindWord.Play();
@@ -311,13 +316,21 @@ namespace HangOn.Gameloop
             OnScoreChanged?.Invoke(0);
         }
 
-        public void Reset_Word()
+        public void Reset_Round()
         {
             ResetHangman();
             ResetKeyboard();
             ResetStage();
             ResetIncorrectGuesses();
             ResetCorrectGuesses();
+            EnableHint();
+
+            OnRoundReset?.Invoke();
+        }
+
+        public void EnableHint()
+        {
+            hasUsedHint = false;
         }
 
         public void SetStage(int stage)
@@ -352,9 +365,10 @@ namespace HangOn.Gameloop
             lettersFound.Add(letter);
         }
 
+        //HINT BUTTON
         public void RevealRandomLetter()
         {
-            if (nbOfCorrectGuess >= word.Length  - 2)
+            if (nbOfCorrectGuess >= word.Length  - 2 || hasUsedHint)
                 return;
             #region debug+
             /*
@@ -376,6 +390,7 @@ namespace HangOn.Gameloop
             */
             #endregion
 
+            hasUsedHint = true;
             int order = -1; 
             foreach (var letter in word)
             {
@@ -417,9 +432,7 @@ namespace HangOn.Gameloop
                 if (letterContainer.AttachedLetter != ___letter)
                     continue;
 
-                letterContainer.ShowLetter(letterContainer.AttachedLetter);
-                AddToLettersFound(letterContainer.AttachedLetter);
-                nbOfCorrectGuess++;
+                CheckLetter(letterContainer.AttachedLetter);
                 lettersNotFound.Remove(letterContainer.AttachedLetter);
             }
         }
