@@ -28,7 +28,7 @@ namespace HangOn.Navigation
 
         public void MoreGames()
         {
-            Application.OpenURL("https://www.untanglegoatsjeu.com/en/#reviews");
+            Application.OpenURL("https://manumuudo.itch.io/");
         }
     }
 }
