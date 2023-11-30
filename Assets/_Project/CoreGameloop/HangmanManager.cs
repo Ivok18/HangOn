@@ -293,6 +293,10 @@ namespace HangOn.Gameloop
         public void RewindHangman(int rewindCount)
         {
             currStageIndex -= rewindCount;
+            if(currStageIndex < 0)
+            {
+                currStageIndex = 0;
+            }
             OnRewindHangman?.Invoke(currStageIndex, rewindCount);
         }
 
@@ -427,7 +431,7 @@ namespace HangOn.Gameloop
 
             int randomIndex = Random.Range(0, lettersNotFound.Count);
             var ___letter = lettersNotFound[randomIndex].ToString();
-
+            LetterContainer ___letterContainer = null;
   
             order = -1;
             foreach (Transform child in wordContainer.GetComponentInChildren<Transform>())
@@ -439,13 +443,14 @@ namespace HangOn.Gameloop
                 if (isFirstLetter || isLastLetter)
                     continue;
 
-                LetterContainer letterContainer = child.GetComponent<LetterContainer>();
-                if (letterContainer.AttachedLetter != ___letter)
+                if (child.GetComponent<LetterContainer>().AttachedLetter != ___letter)
                     continue;
 
-                CheckLetter(letterContainer.AttachedLetter);
-                lettersNotFound.Remove(letterContainer.AttachedLetter);
+                ___letterContainer = child.GetComponent<LetterContainer>();
+                lettersNotFound.Remove(___letterContainer.AttachedLetter);
             }
+            TryDisableInKeyboard(___letterContainer.AttachedLetter);
+            CheckLetter(___letterContainer.AttachedLetter);
         }
     }
 }
