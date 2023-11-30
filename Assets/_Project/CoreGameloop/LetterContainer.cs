@@ -20,8 +20,10 @@ namespace HangOn.Gameloop
         [SerializeField] private GameObject pointsRewardContainer;
         [SerializeField] private float transparency;
         [SerializeField] private string attachedLetter;
+        [SerializeField] private TextMeshProUGUI textReward;
         private Image underscoreImage;
         private TextMeshProUGUI text;
+
 
         public string AttachedLetter => attachedLetter;
 
@@ -43,12 +45,13 @@ namespace HangOn.Gameloop
             text = GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        private void OnLetterGuessed(LetterContainer letterContainer)
+        private void OnLetterGuessed(LetterContainer letterContainer, int letterBonus)
         {
             if (letterContainer.AttachedLetter != attachedLetter)
                 return;
 
             ShowLetter(AttachedLetter);
+            textReward.text = letterBonus.ToString();
             isVisible = true;
         }
 

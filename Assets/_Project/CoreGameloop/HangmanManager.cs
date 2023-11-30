@@ -45,10 +45,10 @@ namespace HangOn.Gameloop
         public delegate void RunEndedCallback(int finalScore);
         public static event RunEndedCallback OnRunEnded;
 
-        public delegate void GuessedLetterCallback(LetterContainer letterContainer);
+        public delegate void GuessedLetterCallback(LetterContainer letterContainer, int letterBonus);
         public static event GuessedLetterCallback OnLetterGuessed;
 
-        public delegate void GuessedWordCallback();
+        public delegate void GuessedWordCallback(int wordBonus);
         public static event GuessedWordCallback OnWordGuessed;
 
         public delegate void RoundResetCallback();
@@ -167,7 +167,7 @@ namespace HangOn.Gameloop
                     //lettersInWord[i].text = inputLetter;
                     var letterContainer = WordContainer.GetComponentsInChildren<LetterContainer>().Where(x => x.AttachedLetter == inputLetter).FirstOrDefault();
                    
-                    OnLetterGuessed?.Invoke(letterContainer);
+                    OnLetterGuessed?.Invoke(letterContainer, letterBonus);
                 }     
             }
             if (!isLetterInWord)
@@ -202,7 +202,7 @@ namespace HangOn.Gameloop
                 StartCoroutine(NewWord(1f));
                 Reset_Round();
 
-                OnWordGuessed?.Invoke();
+                OnWordGuessed?.Invoke(wordBonus);
 
                 Game_Anim1_FindWord.Play();
             }

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using HangOn.Gameloop;
+using TMPro;
 using UnityEngine;
 
 namespace HangOn.Animations
@@ -49,9 +50,10 @@ namespace HangOn.Animations
             }*/
         }
 
-        private void OnLetterGuessed(LetterContainer letterContainer)
+        private void OnLetterGuessed(LetterContainer letterContainer, int letterBonus)
         {
             animTarget = letterContainer.PointsRewardContainer.transform;
+            letterContainer.GetComponentInChildren<TextMeshProUGUI>().text = letterBonus.ToString();
             animTarget.gameObject.SetActive(true);
             startOfPath = animTarget.gameObject;
             Play();

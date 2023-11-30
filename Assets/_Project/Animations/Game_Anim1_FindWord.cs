@@ -1,6 +1,8 @@
 using DG.Tweening;
 using HangOn.Gameloop;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace HangOn.Animations
 {
@@ -40,9 +42,10 @@ namespace HangOn.Animations
             //Play();
         }
 
-        private void OnWordGuessed()
+        private void OnWordGuessed(int wordBonus)
         {
             animTarget.gameObject.SetActive(true);
+            animTarget.GetComponentInChildren<TextMeshProUGUI>().text = wordBonus.ToString();
         }
             
         private void SetupAnimAndStart(Transform animTarget)
