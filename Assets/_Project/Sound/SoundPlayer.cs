@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UntangleGoats.Audio
+namespace HangOn.Audio
 {
     public class SoundPlayer : MonoBehaviour
     {

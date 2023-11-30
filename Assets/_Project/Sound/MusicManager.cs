@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UntangleGoats.Audio
+namespace HangOn.Audio
 {
     public class MusicManager : MonoBehaviour
     {
@@ -55,7 +55,7 @@ namespace UntangleGoats.Audio
 
         public void ChangeVolume(float newValue)
         {
-            audioSource.volume = 1 - newValue;
+            audioSource.volume = newValue;
         }
     }
 }
