@@ -25,5 +25,10 @@ namespace HangOn.Navigation
         {
             UICredits.Open();
         }
+
+        public void MoreGames()
+        {
+            Application.OpenURL("https://www.untanglegoatsjeu.com/en/#reviews");
+        }
     }
 }

@@ -23,6 +23,8 @@ namespace HangOn.Animations
             Game_EndOfRun_Anim1_GoldMedal.OnRequestPlayGoldMedalAnim += Play;
             Game_EndOfRun_Anim1_SilverMedal.OnRequestPlaySilverMedalAnim += Play;
             Game_EndOfRun_Anim1_BronzeMedal.OnRequestPlayBronzeMedalAnim += Play;
+
+            MainMenu_Credits_Anim1_WebsiteButton.OnRequestPlayWebsiteButtonAnim += Play;
             //Game_Anim1_WrongLetter.OnRequestPlayWrongLetterAnim += Play;
             /*Loading_Anim_Haystack.OnRequestPlayHaystackAnim += Play;
             Loading_Anim2_Haystack.OnRequestPlayHaystackAnim += Play;
@@ -80,6 +82,8 @@ namespace HangOn.Animations
             Game_EndOfRun_Anim1_GoldMedal.OnRequestPlayGoldMedalAnim -= Play;
             Game_EndOfRun_Anim1_SilverMedal.OnRequestPlaySilverMedalAnim -= Play;
             Game_EndOfRun_Anim1_BronzeMedal.OnRequestPlayBronzeMedalAnim -= Play;
+
+            MainMenu_Credits_Anim1_WebsiteButton.OnRequestPlayWebsiteButtonAnim -= Play;
             //Game_Anim1_WrongLetter.OnRequestPlayWrongLetterAnim -= Play;
 
             //Game_EndOfRun_Anim1_LeaderboardMention.OnRequestPlayLeaderboardMentionAnim -= Play;
