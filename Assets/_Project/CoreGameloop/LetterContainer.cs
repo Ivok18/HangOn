@@ -48,6 +48,7 @@ namespace HangOn.Gameloop
             if (letterContainer != this)
                 return;
 
+            //ShowLetter(AttachedLetter);
             isVisible = true;
         }
 

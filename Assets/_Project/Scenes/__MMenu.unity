@@ -2114,7 +2114,7 @@ GameObject:
   - component: {fileID: 606133837}
   - component: {fileID: 606133838}
   m_Layer: 0
-  m_Name: 'UIWindowManager '
+  m_Name: UIWindowManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -126,11 +126,12 @@ namespace HangOn.Gameloop
             }
             else
             {
-                if(isDuplicate)
+                
+                if(isDuplicate && (word[0] == letter || word[word.Length - 1] == letter))
                 {
                     letterContainer.ShowLetter(letter.ToString());
                     nbOfCorrectGuessLeft--;
-                    Debug.Log($"Letter {letter} is a duplicate.");
+                    Debug.Log($"Letter {letter} is a duplicate of either the first letter o");
                 }
                 else
                 {
@@ -163,7 +164,7 @@ namespace HangOn.Gameloop
                     TextMeshProUGUI[] lettersInWord = WordContainer.GetComponentsInChildren<TextMeshProUGUI>();
                     lettersInWord[i].text = inputLetter;
                     var letterContainer = WordContainer.GetComponentsInChildren<LetterContainer>().Where(x => x.AttachedLetter == inputLetter).FirstOrDefault();
-
+                    
                     OnLetterGuessed?.Invoke(letterContainer);
                 }     
             }
