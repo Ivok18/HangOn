@@ -12256,8 +12256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -51, y: -26}
-  m_SizeDelta: {x: 188.3196, y: 50}
+  m_AnchoredPosition: {x: -114.56, y: -26}
+  m_SizeDelta: {x: 229.11, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1308556585
 MonoBehaviour:
@@ -12279,10 +12279,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:'
+  m_text: Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c3198a444b7bd054c8b5c37b3ca66f37, type: 2}
-  m_sharedMaterial: {fileID: 2416544747669768391, guid: c3198a444b7bd054c8b5c37b3ca66f37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be3d712254f23d14f892c698f7ec775e, type: 2}
+  m_sharedMaterial: {fileID: 5847420806454711417, guid: be3d712254f23d14f892c698f7ec775e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12306,13 +12306,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.3
+  m_fontSize: 51
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 30
-  m_fontSizeMax: 38.3
-  m_fontStyle: 0
+  m_fontSizeMax: 51
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -12342,7 +12342,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -47.63533, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
