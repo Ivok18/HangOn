@@ -9,6 +9,7 @@ namespace HangOn.Audio
 
         private void Awake()
         {
+            Screen.orientation = ScreenOrientation.Portrait;
             audioSource = GetComponent<AudioSource>();
             if (Instance == null)
             {
