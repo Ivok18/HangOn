@@ -1,13 +1,11 @@
-using DG.Tweening;
 using HangOn.Animations;
+using HangOn.Audio;
 using HangOn.Navigation;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UntangleGoats.Audio;
 
 namespace HangOn.Gameloop
 {
