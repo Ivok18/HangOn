@@ -17,7 +17,7 @@ namespace HangOn.Gameloop
 
       
         [Header("Other")]
-        [SerializeField] private TextMeshProUGUI textPointsReward;
+        [SerializeField] private GameObject pointsRewardContainer;
         [SerializeField] private float transparency;
         [SerializeField] private string attachedLetter;
         private Image underscoreImage;
@@ -25,7 +25,7 @@ namespace HangOn.Gameloop
 
         public string AttachedLetter => attachedLetter;
 
-        public TextMeshProUGUI TextPointsReward => textPointsReward;
+        public GameObject PointsRewardContainer => pointsRewardContainer;
         private void OnEnable()
         {
             HangmanManager.OnIncorrectGuess += OnIncorrectGuess;

@@ -51,7 +51,7 @@ namespace HangOn.Animations
 
         private void OnLetterGuessed(LetterContainer letterContainer)
         {
-            animTarget = letterContainer.TextPointsReward.transform;
+            animTarget = letterContainer.PointsRewardContainer.transform;
             animTarget.gameObject.SetActive(true);
             startOfPath = animTarget.gameObject;
             Play();
