@@ -44,7 +44,11 @@ namespace HangOn.Gameloop
 
         private void OnResetHangman(int currStageIndex)
         {
-            hangmanContainer.Stages[currStageIndex].SetActive(false);
+            for(int i = 1; i < hangmanContainer.Stages.Length; i++)
+            {
+                hangmanContainer.Stages[i].SetActive(false);
+            }
+            //hangmanContainer.Stages[currStageIndex].SetActive(false);
             hangmanContainer.Stages[0].SetActive(true);
         }
     }

@@ -4,6 +4,7 @@ using HangOn.Navigation;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -108,6 +109,7 @@ namespace HangOn.Gameloop
                 order++;
                 CreateLetterContainer(letter, order);        
             }
+            ResetHangman();
         }
 
         private void CreateLetterContainer(char letter,int order)
@@ -200,11 +202,9 @@ namespace HangOn.Gameloop
             if(hasFoundWord)
             {
                 GainWordPoints();
-                StartCoroutine(NewWord(1f));
                 Reset_Round();
-
+                StartCoroutine(NewWord(1f));
                 OnWordGuessed?.Invoke(wordBonus);
-
                 Game_Anim1_FindWord.Play();
             }
         }
@@ -317,7 +317,7 @@ namespace HangOn.Gameloop
 
         public void Reset_Round()
         {
-            ResetHangman();
+            //ResetHangman();
             ResetKeyboard();
             ResetStage();
             ResetIncorrectGuesses();
