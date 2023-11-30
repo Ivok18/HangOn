@@ -23,7 +23,7 @@ namespace HangOn.Gameloop
 
         private void OnScoreChanged(int newScore)
         {
-            text.text = newScore.ToString() + "P";
+            text.text = newScore.ToString();
         }
     }
 }
